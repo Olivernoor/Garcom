@@ -1,9 +1,20 @@
-import express, {Router} from 'express'
-import mesaController from '../../controllers/mesa/mesaController'
+import express, { Router } from 'express';
+import mesaController from '../../controllers/mesa/mesaController';
 
-const mesaRouter: Router = express.Router()
+const mesaRouter: Router = express.Router();
 
-mesaRouter.post('/mesa',mesaController.createMesa)
+mesaRouter.post('/mesa', mesaController.createMesa);
 
 
-export default mesaRouter
+mesaRouter.get('/mesa', mesaController.listarMesas);
+
+
+mesaRouter.get('/mesa/:id', mesaController.buscarMesaPorId);
+
+
+mesaRouter.put('/mesa/:id', mesaController.atualizarMesa);
+
+
+mesaRouter.delete('/mesa/:id', mesaController.deletarMesa);
+
+export default mesaRouter;
