@@ -10,13 +10,13 @@ empresaRouter.post('/empresa', empresaController.createEmpresa);
 empresaRouter.get('/empresa', empresaController.listarEmpresas);
 
 
-empresaRouter.get('/empresa/:id', empresaController.findByCnpj);
+empresaRouter.get('/empresa/:cnpj', empresaController.findByCnpj);
 
 
-empresaRouter.put('/empresa/:id', empresaController.updateEmpresa);
+empresaRouter.put('/empresa/:cnpj', empresaController.updateEmpresa);
 
 
-empresaRouter.delete('/empresa/:id', empresaController.deleteEmpresa);
+empresaRouter.delete('/empresa/:cnpj', empresaController.deleteEmpresa);
 
 export default empresaRouter;
 
