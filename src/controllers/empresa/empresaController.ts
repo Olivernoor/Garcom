@@ -16,7 +16,7 @@ export const login = async (req: Request, res: Response) => {
       return res.status(401).json({ message: 'Credenciais inválidas ou empresa inativa' });
     }
 
-    /
+    
     const token = jwt.sign(
       { cnpj: empresa.cnpj, email: empresa.email },
       secretKey,
